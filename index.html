@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valerie C. Riggs, Ed.D.</title>
+<meta name="description" content="Valerie C. Riggs, Ed.D. — Associate Professor of Teacher Education & Professional Development at Morgan State University. Research on AI literacy, teacher preparation, and global education.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --ink: #1f1d1a;
+    --muted: #5d5850;
+    --rule: #e4ddd2;
+    --accent: #1d4e89;      /* Morgan blue */
+    --accent-2: #e87722;    /* Morgan orange */
+    --tag-bg: #eef3f9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15171b; --surface: #1d2026; --ink: #ece8e1; --muted: #a8a299;
+      --rule: #2f333a; --accent: #8db6ea; --accent-2: #f2a05e; --tag-bg: #232a35;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 400 17px/1.65 "Source Sans 3", system-ui, sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-2); }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule);
+  }
+  nav .wrap { display: flex; gap: 22px; align-items: center; height: 56px; overflow-x: auto; white-space: nowrap; }
+  nav .brand { font-family: Fraunces, Georgia, serif; font-weight: 600; color: var(--ink); text-decoration: none; margin-right: auto; }
+  nav a.link { color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav a.link:hover { color: var(--accent); }
+
+  header.hero { padding: 72px 0 48px; border-bottom: 1px solid var(--rule); }
+  .hero-grid { display: grid; grid-template-columns: 1fr 240px; gap: 40px; align-items: center; }
+  .portrait { width: 240px; height: 240px; border-radius: 50%; object-fit: cover; border: 4px solid var(--surface); box-shadow: 0 0 0 2px var(--accent-2); }
+  @media (max-width: 720px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+    .portrait { width: 160px; height: 160px; order: -1; }
+  }
+  .eyebrow { color: var(--accent-2); font-weight: 600; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+  h1 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: clamp(36px, 6vw, 56px); line-height: 1.08; margin: 10px 0 14px; }
+  .role { font-size: 19px; color: var(--muted); margin: 0 0 24px; }
+  .lede { font-size: 19px; max-width: 680px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding: 0; list-style: none; }
+  .tags li { background: var(--tag-bg); color: var(--accent); padding: 4px 12px; border-radius: 999px; font-size: 14px; font-weight: 600; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn { display: inline-block; padding: 10px 18px; border-radius: 6px; font-weight: 600; text-decoration: none; border: 1px solid var(--accent); }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn.primary:hover { background: var(--accent-2); border-color: var(--accent-2); color: #fff; }
+
+  section { padding: 56px 0; border-bottom: 1px solid var(--rule); }
+  h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; font-size: 30px; margin: 0 0 24px; }
+  h3 { font-size: 18px; margin: 0 0 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 20px; }
+  .card .meta { color: var(--muted); font-size: 14px; margin-bottom: 8px; }
+  .card p { margin: 6px 0 0; }
+  .badge { display: inline-block; font-size: 12px; font-weight: 600; color: var(--accent-2); text-transform: uppercase; letter-spacing: .06em; }
+
+  ol.pubs { padding-left: 0; list-style: none; margin: 0; }
+  ol.pubs li { padding: 14px 0; border-top: 1px solid var(--rule); }
+  ol.pubs li:first-child { border-top: 0; }
+  .year { font-weight: 600; color: var(--accent); margin-right: 8px; }
+  .venue { font-style: italic; }
+
+  dl.timeline { margin: 0; display: grid; grid-template-columns: 130px 1fr; gap: 10px 20px; }
+  dl.timeline dt { color: var(--muted); font-weight: 600; }
+  dl.timeline dd { margin: 0; }
+
+  ul.plain { padding-left: 20px; margin: 0; }
+  ul.plain li { margin: 6px 0; }
+
+  .contact { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 24px; }
+  footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 600px) {
+    header.hero { padding: 48px 0 36px; }
+    dl.timeline { grid-template-columns: 1fr; gap: 2px; }
+    dl.timeline dd { margin-bottom: 12px; }
+    nav a.link { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">V. C. Riggs</a>
+    <a class="link" href="#about">About</a>
+    <a class="link" href="#research">Research</a>
+    <a class="link" href="#publications">Publications</a>
+    <a class="link" href="#talks">Talks</a>
+    <a class="link" href="#global">Global</a>
+    <a class="link" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main id="top">
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+      <div class="eyebrow">Morgan State University</div>
+      <h1>Valerie C. Riggs, Ed.D.</h1>
+      <p class="role">Associate Professor, Department of Teacher Education &amp; Professional Development</p>
+      <p class="lede">I study how teachers learn to use artificial intelligence well: building AI literacy, trust, and equitable practice in teacher preparation, K–12 classrooms, and higher education.</p>
+      <ul class="tags" aria-label="Areas of focus">
+        <li>AI literacy for educators</li>
+        <li>Teacher preparation</li>
+        <li>Science of Reading</li>
+        <li>Instructional design</li>
+        <li>Global education</li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="mailto:valerie.riggs@morgan.edu">Email me</a>
+        <a class="btn" href="#research">Current projects</a>
+        <a class="btn" href="https://orcid.org/0009-0006-4660-7213">ORCID</a>
+      </div>
+      </div>
+      <img class="portrait" src="headshot.jpg" alt="Portrait of Valerie C. Riggs" width="240" height="240">
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>I joined Morgan State University in 2015 and became Associate Professor in 2026. Before that, I taught English and developmental writing at the Community College of Baltimore County and middle school social studies and magnet science in Baltimore County Public Schools.</p>
+      <p>At Morgan, I teach undergraduate and graduate courses including Artificial Intelligence for Educators, a course I developed, along with Action Research, Science of Reading, and educational technology. I chair the university's Foundational AI Education Curriculum Subcommittee, serve on the President's Committee on Strategic Use of AI, and am affiliated faculty with the NSF-funded TRAILS Institute for Trustworthy AI. I also design AI professional development for Maryland school districts and serve on the Education &amp; Workforce Development Committee of the Maryland Responsible AI Council.</p>
+      <p>I have chaired or served on five doctoral dissertation committees and supervise undergraduate and graduate student researchers.</p>
+
+      <h3 style="margin-top:28px">Education</h3>
+      <dl class="timeline">
+        <dt>Ed.D.</dt><dd>Urban Education Leadership, Morgan State University</dd>
+        <dt>M.S.</dt><dd>Instructional Design, Towson University</dd>
+        <dt>M.A.</dt><dd>Education, University of Maryland, Baltimore County</dd>
+        <dt>B.A.</dt><dd>Sociology, University of Maryland, College Park</dd>
+      </dl>
+
+      <h3 style="margin-top:28px">Fellowships &amp; certificates</h3>
+      <ul class="plain">
+        <li>Fulbright Specialist, Equatorial Guinea (2025 award; 2026 project with the Afro-American University of Central Africa)</li>
+        <li>Amazon Machine Learning University Educator Enablement Cohort (2025)</li>
+        <li>AI Learn Lab Certificate, Carnegie Mellon University (2024)</li>
+        <li>University Innovation Fellow, Stanford d.school (2023)</li>
+        <li>Maryland Education Policy Fellowship Program (2018)</li>
+        <li>Quality Matters Certified Peer Reviewer (2017–present)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="wrap">
+      <h2>Current projects</h2>
+      <div class="grid">
+        <article class="card">
+          <span class="badge">PI · NSF TRAILS</span>
+          <h3>GUARD</h3>
+          <div class="meta">Guarding Against Unverified Reasoning Defaults · 2026</div>
+          <p>A prompt-level discipline for catching and correcting how large language models mischaracterize institutions, developed with a student research team.</p>
+          <p><a href="https://www.morgan.edu/tepd/guard/">Project page</a></p>
+        </article>
+        <article class="card">
+          <span class="badge">PI · NSF TRAILS</span>
+          <h3>Human-Enabled AI Tutoring</h3>
+          <div class="meta">2026</div>
+          <p>High-dosage, human-enabled AI tutoring to build educator trust in using AI to teach the Science of Reading to young learners.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Co-PI · NSF TRAILS</span>
+          <h3>Better Together</h3>
+          <div class="meta">2025–2026 · Baltimore</div>
+          <p>Building AI capacity through joint learning for mentor teachers and teacher candidates.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Co-PI · TRAILS</span>
+          <h3>AI Support Beyond Math &amp; Reading</h3>
+          <div class="meta">2024–2025</div>
+          <p>Extending AI educational support into subject areas beyond math and reading.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Co-PI · MSDE</span>
+          <h3>Project UPLIFT</h3>
+          <div class="meta">2017–2022 · $750,000</div>
+          <p>Strengthening literacy instruction for teachers in grades 3–8.</p>
+        </article>
+        <article class="card">
+          <span class="badge">Program Coordinator</span>
+          <h3>CEAMLS SARI Summer Institute</h3>
+          <div class="meta">2024–2025</div>
+          <p>Designed and facilitated AI literacy curricula for high school teachers in Maryland school districts.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <div class="wrap">
+      <h2>Selected publications</h2>
+      <ol class="pubs">
+        <li><span class="year">2026</span>Riggs, V., Masa-Ibi, E., Onyejiekwe, D., Segura-Silverio, Y., &amp; Bhatta, A. GUARD: A prompt-level discipline for correcting categorical gist substitution in large language model characterizations of institutions. <span class="venue">SSRN</span>. <a href="https://doi.org/10.2139/ssrn.7543000">doi:10.2139/ssrn.7543000</a></li>
+        <li><span class="year">2026</span>Riggs, V., &amp; Maukle, N. Developing high school teachers' self-efficacy for artificial intelligence through an AI literacy professional development program. <span class="venue">Journal of Research on Technology in Education</span>. <a href="https://doi.org/10.1080/15391523.2026.2704775">doi:10.1080/15391523.2026.2704775</a></li>
+        <li><span class="year">2026</span>Riggs, V. C. A Pan-African university defines its AI journey: Executive summary and practitioner observations. Report prepared for the <span class="venue">Afro-American University of Central Africa (AAUCA)</span>, Equatorial Guinea.</li>
+        <li><span class="year">2025</span>Riggs, V. Teachers' perceptions and readiness for AI integration in under-resourced K–12 classrooms. <span class="venue">Journal of Research Initiatives, 9</span>(1). <a href="https://digitalcommons.uncfsu.edu/jri/vol9/iss1/1">Read article</a></li>
+        <li><span class="year">2025</span>Riggs, V. Impact of AI literacy professional development on teaching: Evaluating changes in perceptions and classroom practices. <span class="venue">American Journal of STEM Education, 7</span>, 37–50. <a href="https://doi.org/10.32674/rbajg012">doi:10.32674/rbajg012</a></li>
+        <li><span class="year">2021</span>Riggs, V. Reflections of a faculty learning management ambassador on the observed impact of COVID-19 on HBCU faculty and online learning. In R. Papa &amp; K. M. Jackson (Eds.), <span class="venue">Artificial Intelligence, Human Agency and the Educational Leader</span> (pp. 42–45). Springer.</li>
+        <li><span class="year">2021</span>Riggs, V., Bista, K., &amp; Anderson, C. Examining the relationship between HBCU faculty online education, innovativeness, and attitudes toward computers. <span class="venue">Journal of Underrepresented &amp; Minority Progress, 5</span>(2), 125–144.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="talks">
+    <div class="wrap">
+      <h2>Selected presentations &amp; talks</h2>
+      <ul class="plain">
+        <li>Designing a professional development workshop to increase K–12 teachers' AI literacy and self-efficacy. AERA Annual Meeting, Los Angeles (2026, with Byrne, James, &amp; Debrewer).</li>
+        <li>Invited panelist, "Innovation, Equity &amp; Accountability in Education: Emerging Technologies &amp; Accreditation." Lincoln University Alumni Association (2026).</li>
+        <li>How to set the right AI rules for the campus. Webinar panelist, <em>The Chronicle of Higher Education</em> (2025).</li>
+        <li>WhatsApp mobile-mediated reflection to explore student experiences and teaching identity during study abroad in the African Diaspora. SELF–ERAS International Conference, Singapore (2025).</li>
+        <li>Understanding the effectiveness of AI literacy training in teacher development. WERA Focal Meeting, Brazil (2025).</li>
+        <li>Evaluating the impact of AI literacy professional development on teachers' perception and practice. AERA Annual Meeting, Denver (2025).</li>
+        <li>From barriers to breakthroughs: An HBCU's journey with artificial intelligence. AAC&amp;U Conference, Puerto Rico (2024).</li>
+        <li>Developing an introductory artificial intelligence course in teacher education. STAR Global Conference, Madrid (2023).</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="global">
+    <div class="wrap">
+      <h2>Global education</h2>
+      <p>I lead study abroad programs that examine education systems in other countries, connecting teacher candidates with schools and universities abroad.</p>
+      <div class="grid">
+        <div class="card"><h3>Ghana</h3><div class="meta">2021 · 2024 · 2025 · 2026</div><p>Partnerships with the University of Ghana, University of Cape Coast, and All Nations University.</p></div>
+        <div class="card"><h3>Costa Rica</h3><div class="meta">2022 · 2024</div></div>
+        <div class="card"><h3>Japan</h3><div class="meta">2025</div></div>
+        <div class="card"><h3>Equatorial Guinea</h3><div class="meta">Fulbright Specialist · 2026</div><p>AI strategy work with the Afro-American University of Central Africa.</p></div>
+      </div>
+      <p style="margin-top:20px">The study abroad program received the 2025 Department of the Year Award for Study Abroad Program Impact.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p style="margin-top:0"><strong>Email:</strong> <a href="mailto:valerie.riggs@morgan.edu">valerie.riggs@morgan.edu</a></p>
+        <p><strong>ORCID:</strong> <a href="https://orcid.org/0009-0006-4660-7213">0009-0006-4660-7213</a></p>
+        <p><strong>Office:</strong> Banneker Hall, Room 211<br>Morgan State University, Baltimore, MD</p>
+        <p style="margin-bottom:0">Graduate students interested in research on AI in education are welcome to reach out about current projects.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Valerie C. Riggs</div>
+</footer>
+
+</body>
+</html>
