@@ -94,6 +94,22 @@
     dl.timeline dd { margin-bottom: 12px; }
     nav a.link { font-size: 14px; }
   }
+
+  .bio{font-size:19px;line-height:1.7}
+  .tl{list-style:none;padding:0;margin:0}
+  .tl li{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--rule)}
+  .tl li:first-child{border-top:0}
+  .tl span{color:var(--accent-2);font-weight:600;font-size:14px;padding-top:2px}
+  .tl small{color:var(--muted);font-size:14px}
+  .cols2{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+  .panel{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:20px 22px}
+  .panel h3{margin:0 0 10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+  .photo-about{display:grid;grid-template-columns:240px 1fr;gap:36px;align-items:start}
+  .photo-about img{width:240px;height:240px;object-fit:cover;border-radius:50%;border:4px solid var(--surface);box-shadow:0 0 0 2px var(--accent-2)}
+  .photo-about .bio{margin-top:0}
+  .creds{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+  .creds li{border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+  @media(max-width:720px){.cols2,.photo-about{grid-template-columns:1fr}.photo-about img{width:180px;height:180px}}
 </style>
 </head>
 <body>
@@ -112,7 +128,7 @@
 
 <main id="top">
   <header class="hero">
-    <div class="wrap hero-grid">
+    <div class="wrap">
       <div>
       <div class="eyebrow">Morgan State University</div>
       <h1>Valerie C. Riggs, Ed.D.</h1>
@@ -132,35 +148,26 @@
         <a class="btn" href="https://orcid.org/0009-0006-4660-7213">ORCID</a>
       </div>
       </div>
-      <img class="portrait" src="headshot.jpg" alt="Portrait of Valerie C. Riggs" width="240" height="240">
     </div>
   </header>
 
   <section id="about">
     <div class="wrap">
       <h2>About</h2>
-      <p>At Morgan State University, I teach undergraduate and graduate courses in teacher education, including Artificial Intelligence for Educators, a course I developed, along with Action Research and educational technology.</p>
-      <p>Much of my current work focuses on building AI capacity across institutions. I design and lead AI training for university faculty and for teachers in Maryland school districts, and I build AI capacity at universities, most recently as a Fulbright Specialist with the Afro-American University of Central Africa in Equatorial Guinea. As affiliated faculty with the NSF <a href="https://www.trails.umd.edu/riggs">Institute for Trustworthy AI in Law &amp; Society (TRAILS)</a>, I lead funded research on AI tutoring and on bias in AI.</p>
-      <p>I chaired Morgan's Foundational AI Education Curriculum Subcommittee and serve on the President's Committee on Strategic Use of AI. Since 2025, I have served on the Education Committee of the <a href="https://marylandresponsibleai.org/">Maryland Responsible AI Council (MRAC)</a>, and I am a board member of the <a href="http://baltimoreteachersnetwork.org/">Baltimore Teachers Network</a>. I advise doctoral students and supervise undergraduate and graduate student researchers.</p>
-
-      <h3 style="margin-top:28px">Education</h3>
-      <dl class="timeline">
-        <dt>Ed.D.</dt><dd>Urban Education Leadership, Morgan State University</dd>
-        <dt>M.S.</dt><dd>Instructional Design, Towson University</dd>
-        <dt>M.Ed.</dt><dd>Education, University of Maryland, Baltimore County</dd>
-        <dt>B.A.</dt><dd>Sociology, University of Maryland, College Park</dd>
-      </dl>
-
-      <h3 style="margin-top:28px">Honors, fellowships &amp; certificates</h3>
-      <ul class="plain">
-        <li>1879 Award for Faculty Excellence, School of Education and Urban Studies, Morgan State University (2024, 2025)</li>
-        <li>Fulbright Specialist, Equatorial Guinea (2025 award; 2026 project with the Afro-American University of Central Africa)</li>
-        <li>Amazon Machine Learning University Educator Enablement Cohort (2025)</li>
-        <li>AI Learn Lab Certificate, Carnegie Mellon University (2024)</li>
-        <li>Innovation &amp; Design Learning Certificate, Stanford University, Hasso Plattner Institute of Design (d.school) (2023)</li>
-        <li>Maryland Education Policy Fellowship Program (2018)</li>
-        <li>Quality Matters Certified Peer Reviewer (2017–present)</li>
-      </ul>
+      <div class="photo-about"><img src="headshot.jpg" alt="Portrait of Valerie C. Riggs" width="240" height="240"><div><p class="bio">At Morgan State University, I teach undergraduate and graduate courses in teacher education, including <strong>Artificial Intelligence for Educators</strong>, a course I developed. I design and lead AI training for university faculty and Maryland teachers, and I build AI capacity at universities abroad, most recently as a Fulbright Specialist in Equatorial Guinea. As affiliated faculty with the NSF <a href="https://www.trails.umd.edu/riggs">Institute for Trustworthy AI in Law &amp; Society (TRAILS)</a>, I lead funded research on AI tutoring and bias in AI. I also advise doctoral students and mentor undergraduate and graduate researchers.</p><ul class="creds"><li>Fulbright Specialist</li><li>NSF TRAILS Affiliated Faculty</li><li>MRAC Education Committee</li><li>Morgan State AI Strategy Committee</li><li>Baltimore Teachers Network Board</li><li>1879 Faculty Excellence Award ×2</li><li>Maryland Certified Teacher, K–8</li></ul></div></div>
+      <div class="cols2"><div class="panel"><h3>Education</h3><ul class="tl">
+<li><span>2019</span><div><b>Ed.D.</b>, Urban Educational Leadership<br><small>Morgan State University</small></div></li>
+<li><span>2009</span><div><b>M.Ed.</b>, Education<br><small>University of Maryland, Baltimore County</small></div></li>
+<li><span>2007</span><div><b>M.S.</b>, Instructional Design<br><small>Towson University</small></div></li>
+<li><span>2002</span><div><b>B.A.</b>, Sociology<br><small>University of Maryland, College Park</small></div></li></ul></div><div class="panel"><h3>Honors &amp; certificates</h3><ul class="tl">
+<li><span>2024–25</span><div><b>1879 Award for Faculty Excellence</b><br><small>Morgan State University</small></div></li>
+<li><span>2025</span><div><b>Fulbright Specialist</b><br><small>Equatorial Guinea</small></div></li>
+<li><span>2025</span><div><b>Educator Enablement Cohort</b><br><small>Amazon Machine Learning University</small></div></li>
+<li><span>2024</span><div><b>AI Learn Lab Certificate</b><br><small>Carnegie Mellon University</small></div></li>
+<li><span>2023</span><div><b>Innovation &amp; Design Learning Certificate</b><br><small>Stanford d.school</small></div></li>
+<li><span>2018</span><div><b>Maryland Education Policy Fellowship</b></div></li>
+<li><span>2017–</span><div><b>Quality Matters Certified Peer Reviewer</b></div></li>
+<li><span>2003–</span><div><b>Standard Professional Teaching Certificate, Grades K–8</b><br><small>Maryland State Department of Education</small></div></li></ul></div></div>
     </div>
   </section>
 
